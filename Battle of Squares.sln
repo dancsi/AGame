@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Battle of Squares", "Battle of Squares.vcxproj", "{F881A5AA-20AC-49E4-A176-D50F4622C337}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Battle of Squares", "client\Battle of Squares.vcxproj", "{F881A5AA-20AC-49E4-A176-D50F4622C337}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "server\server.vcxproj", "{4454877A-BA97-4783-AF42-DAAEF08E6F07}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "server\server.vcxproj", "{4454877A-BA97-4783-AF42-DAAEF08E6F07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

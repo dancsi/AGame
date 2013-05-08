@@ -1,5 +1,4 @@
-#include "stdafx.h"
-#include "graphics.h"
+#include "graphics/graphics.h"
 
 
 int main(int argc, char* argv[])
