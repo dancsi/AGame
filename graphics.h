@@ -6,7 +6,7 @@
 #include <cstdio>
 #include <cstdlib>
 
-namespace graphics
+namespace Graphics
 {
 	using namespace std;
 	#define WINDOW_TITLE_PREFIX "Battle of Squares"

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "graphics.h"
 
-namespace graphics
+namespace Graphics
 { 
 	
 	int currentWidth = 800,
