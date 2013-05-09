@@ -66,9 +66,6 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>$(ProjectDir)\postbuild.bat "$(ProjectDir)" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -89,9 +86,6 @@
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <PostBuildEvent>
-      <Command>$(ProjectDir)\postbuild.bat "$(ProjectDir)" "$(TargetDir)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="graphics\graphics.h" />
@@ -104,4 +98,16 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ItemGroup>
+        <DLLFiles Include="$(ProjectDir)\DLL\*.dll"/>
+  </ItemGroup>
+  <Target Name="AfterBuild">
+    <Copy
+        SourceFiles="@(DLLFiles)"
+        DestinationFolder="$(TargetDir)">
+        <Output
+            TaskParameter="CopiedFiles"
+            ItemName="SuccessfullyCopiedFiles"/>
+     </Copy>
+  </Target>
 </Project>
