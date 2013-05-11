@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 	while(1)
 	{
 		glutMainLoopEvent();
-		std::cerr<<"Ovo radi!\n";
+		//std::cerr<<"Ovo radi!\n";
 	}
 	return 0;
 }
