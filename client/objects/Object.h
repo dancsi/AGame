@@ -1,7 +1,7 @@
 #ifndef OBJECT_H_INCLUDED
 #define OBJECT_H_INCLUDED
-#define ACCEL 1 // Ubrzanje ukoliko igrac drzi taster.
-#define MAX_V 5 // Maksimalna brzina. Oba broja cemo menjati kako bude trebalo.
+const double ACCEL=1 // Ubrzanje ukoliko igrac drzi taster.
+const double MAX_V=5 // Maksimalna brzina. Oba broja cemo menjati kako bude trebalo.
 
 class Vector
 {
@@ -34,8 +34,9 @@ class Square: public Object
 {
     public:
     bool Up, Down, Left, Right; // Da li su odgovarajuci tasteri pritisnuti.
-    double Accel_X, Accel_Y; // Ubrzanja po X i Y osi.
     Square();
+    protected:
+    double Accel_X, Accel_Y; // Ubrzanja po X i Y osi.
 };
 
 Square::Square()
