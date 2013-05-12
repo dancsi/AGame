@@ -9,13 +9,6 @@ class Vector
     Vector operator+(Vector);
 };
 
-Vector Vector::operator+(Vector b)
-{
-    this->x+=b.x;
-    this->y+=b.y;
-    return *this;
-}
-
 enum Object_Type {S, W}; // Square, Wall
 
 class Object
@@ -39,21 +32,9 @@ class Square: public Object
     double Accel_X, Accel_Y; // Ubrzanja po X i Y osi.
 };
 
-Square::Square()
-{
-    Type=S;
-}
-
 class Wall: public Object
 {
     Wall();
 };
-
-Wall::Wall()
-{
-    Type=W;
-}
-
-
 
 #endif // OBJECT_H_INCLUDED
