@@ -89,25 +89,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="graphics\graphics.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="objects\Object.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Battle of Squares.cpp" />
     <ClCompile Include="graphics\graphics.cpp" />
+    <ClCompile Include="input.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
   <ItemGroup>
-        <DLLFiles Include="$(ProjectDir)\DLL\*.dll"/>
+    <DLLFiles Include="$(ProjectDir)\DLL\*.dll" />
   </ItemGroup>
   <Target Name="AfterBuild">
-    <Copy
-        SourceFiles="@(DLLFiles)"
-        DestinationFolder="$(TargetDir)">
-        <Output
-            TaskParameter="CopiedFiles"
-            ItemName="SuccessfullyCopiedFiles"/>
-     </Copy>
+    <Copy SourceFiles="@(DLLFiles)" DestinationFolder="$(TargetDir)">
+      <Output TaskParameter="CopiedFiles" ItemName="SuccessfullyCopiedFiles" />
+    </Copy>
   </Target>
 </Project>
